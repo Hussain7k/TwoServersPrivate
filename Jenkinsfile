@@ -7,12 +7,7 @@ pipeline {
                 sh "sudo -S npm run"
             }
         }
-        stage("Test") {
-            steps {
-
-                sh "sudo npm test"
-            }
-        }
+       
         stage("Deploy") {
             steps {
                 sh "sudo rm -rf /var/www/jenkins-server"
