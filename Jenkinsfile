@@ -5,6 +5,10 @@ pipeline {
             steps {
                 sh "sudo npm install"
                 sh "sudo -S npm run"
+            }
+        stage("Test") {
+            steps {
+
                 sh "sudo npm test"
             }
         }
