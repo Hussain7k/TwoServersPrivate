@@ -5,7 +5,7 @@ pipeline {
             steps {
                 sh "sudo npm install"
                 sh "sudo -S npm run"
-                hugo baseUrl: 'https://github.com/Hussain7k/TwoServersPrivate.git', destination: 'http://ec2-157-175-250-103.me-south-1.compute.amazonaws.com/', hugoHome: '/usr/local/bin/'
+                sh 'hugo -D -F -b "157.175.250.103:3000" -d public'
             }
         }
        
