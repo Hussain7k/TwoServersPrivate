@@ -12,7 +12,7 @@ pipeline {
         stage("Deploy") {
             steps {
                 sh "sudo cp -r ${WORKSPACE}/build/ /var/www/jenkins-server/"
-                rsync -r "$WORKSPACE/build/" Hussain7k@https://github.com/Hussain7k/TwoServersPrivate.git:/usr/share/nginx/html/
+                rsync -r "$WORKSPACE/public/" Hussain7k@https://github.com/Hussain7k/TwoServersPrivate.git:/usr/share/nginx/html/
             }
         }
     }
