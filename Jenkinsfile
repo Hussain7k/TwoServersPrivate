@@ -5,7 +5,7 @@ pipeline {
             steps {
                 sh "sudo npm install"
                 sh "sudo -S npm run"
-                sh 'hugo -D -F -b "157.175.250.103:3000" -d public'
+                hugo '-D -F -b "157.175.250.103" -d public'
             }
         }
        
