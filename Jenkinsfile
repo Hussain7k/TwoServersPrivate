@@ -5,7 +5,7 @@ pipeline {
             steps {
                 sh "sudo npm install"
                 sh "sudo -S npm run"
-                hugo -D -F -b "http://ec2-157-175-250-103.me-south-1.compute.amazonaws.com" -d public
+                sh 'hugo -D -F -b "http://ec2-157-175-250-103.me-south-1.compute.amazonaws.com" -d public'
             }
         }
        
